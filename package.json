@@ -1,7 +1,7 @@
 {
-  "name": "component-library",
+  "name": "@clearsparc/component-library",
   "version": "0.1.0",
-  "description": "A reusable web component library in TypeScript.",
+  "description": "A collection of reusable web components designed written based off of HTML5Elements - can be used in standard/Angular/React/Vue applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -16,10 +16,10 @@
   "keywords": [
     "web-components",
     "typescript",
-    "library"
+    "library",
+    "html5"
   ],
   "author": "Jonathan Roselle (Clearsparc)",
-  "companyname": "Clearsparc",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.3",
