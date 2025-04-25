@@ -1,0 +1,59 @@
+.donut-chart-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: sans-serif;
+    justify-content: flex-start;
+}
+.donut-canvas {
+    display: block;
+}
+.donut-legend {
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+    flex-shrink: 0;
+}
+.donut-legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 280px;
+    overflow-y: auto;
+}
+.donut-legend li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.legend-color-box {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+}
+.legend-label { margin-right: 5px; color: #333; }
+.legend-amount { margin-right: 5px; color: #555; font-weight: bold; }
+.legend-percentage { color: #777; font-size: 0.9em; }
+.legend-total { margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 14px; }
+.no-data-message { color: #888; font-style: italic; padding: 20px; text-align: center; width: 100%; }
+@media (max-width: 600px) {
+    .donut-chart-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .donut-canvas {
+        margin: 0;
+    }
+    .donut-legend {
+        border-left: none;
+        border-top: 1px solid #eee;
+        padding-left: 0;
+        padding-top: 15px;
+        margin-top: 15px;
+        max-height: 150px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,95 @@
+.timeline-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0;
+    position: relative;
+}
+.timeline-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* New stack for EACH node and its info */
+.timeline-node-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px; /* Set a reasonable minimum width for alignment */
+}
+
+.timeline-node-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.node {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #d4aa47;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    z-index: 1;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    box-shadow: 0 2px 4px #0002;
+    position: relative;
+}
+
+.connector {
+    position: absolute;
+    top: 24px;
+    left: 100%;
+    width: 74px;
+    height: 2px;
+    background: #bbb;
+    z-index: 0;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+    margin-top: 7px;
+    font-weight: 600;
+    color: #222;
+    font-size: 1.04rem;
+    text-align: center;
+    white-space: normal;
+}
+
+.date {
+    font-size: .98rem;
+    color: #888;
+    margin-top: -2px;
+    text-align: center;
+}
+
+.days-between {
+    background: white;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    color: #666;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: absolute;
+    top: -15px;
+}
+
+.timeline-row.reverse .connector {
+    left: auto;
+    right: 100%;
+}
+
+.timeline-row.reverse .days-between {
+    left: auto;
+    right: 0;
+}

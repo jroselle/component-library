@@ -1,0 +1,17 @@
+<div class="timeline-wrapper">
+${this.wrappedRows.map((row, rowIndex) => `
+  <div class="timeline-row${rowIndex % 2 === 1 ? ' reverse' : ''}">
+    ${row.map((node, i, arr) => `
+      <div class="timeline-node-stack">
+        <div class="timeline-node-container">
+          ${rowIndex > 0 && i === arr.length - 1 ? `<div class="connector"><span class="days-between">${this.getPreviousNodeDays(node)} days</span></div>` : ''}
+          <div class="node"><span class="check">&#10003;</span></div>
+          ${i !== arr.length - 1 ? `<div class="connector"><span class="days-between">${node.daysTillNext} days</span></div>` : ''}
+        </div>
+        <div class="label">${node.label}</div>
+        <div class="date">${node.dateObj instanceof Date ? node.dateObj.toLocaleDateString() : ''}</div>
+      </div>
+    `).join('')}
+  </div>
+`).join('')}
+</div>
